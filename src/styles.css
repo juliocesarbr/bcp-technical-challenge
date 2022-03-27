@@ -11,3 +11,6 @@ to override bulma align to left in this component */
   display: inline-block;
 }
 
+.clickable-row:hover {
+  cursor: pointer;
+}

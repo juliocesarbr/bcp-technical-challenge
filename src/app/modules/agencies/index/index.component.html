@@ -10,7 +10,7 @@
             <!--Start Table-->
             <table class="table table is-fullwidth">
               <tbody>
-                <tr *ngFor="let elem of agenciesData">
+                <tr class="clickable-row" *ngFor="let elem of agenciesData" (click)="goToUpdate(elem)">
                   <!--Image row-->
                   <td>
                     <figure class="image is-64x64">
@@ -26,13 +26,10 @@
                   </td>
                   <!--Name, Province and Address row-->
                   <!--Favourite row-->
-                  <td>
-                    Star ICON
+                  <td class="is-vcentered">
+                    <fa-icon [icon]="faStar"></fa-icon>
                   </td>
                   <!--Favourite row-->
-                  <td>
-                    <button class="button is-info" (click)="goToUpdate(elem)">Detalles</button>
-                  </td>
                 </tr>
               </tbody>
             </table>

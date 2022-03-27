@@ -5,6 +5,8 @@ import { IndexComponent } from './index/index.component';
 import { UpdateComponent } from './update/update.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 const routes: Routes = [
   { path: '', component: IndexComponent },
   { path: 'index', component: IndexComponent },
@@ -19,7 +21,8 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   exports: [
     RouterModule
