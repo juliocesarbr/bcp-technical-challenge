@@ -1,0 +1,86 @@
+<nav class="navbar is-link">
+  <div class="navbar-brand">
+    <span class="navbar-item is-size-3">Detalle de Agencia</span>
+  </div>
+</nav>
+
+<form class="m-2" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <!--Agency Name Input-->
+  <div class="field">
+    <label class="label">Nombre de Agencia</label>
+    <div class="control">
+      <input class="input" type="text" formControlName="name">
+      <div *ngIf="submitted && form.get('name')?.errors" class="small text-danger">
+        <div *ngIf="f['name'].errors && f['name'].errors['required']">
+          <p class="help is-danger">Este campo es obligatorio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Agency Name Input-->
+
+  <!--Address Input-->
+  <div class="field">
+    <label class="label">Dirección</label>
+    <div class="control">
+      <input class="input" type="text" formControlName="address">
+      <div *ngIf="submitted && form.get('address')?.errors" class="small text-danger">
+        <div *ngIf="f['address'].errors && f['address'].errors['required']">
+          <p class="help is-danger">Este campo es obligatorio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Address Input-->
+
+  <!--District Input-->
+  <div class="field">
+    <label class="label">Distrito</label>
+    <div class="control">
+      <input class="input" type="text" formControlName="district">
+      <div *ngIf="submitted && form.get('district')?.errors" class="small text-danger">
+        <div *ngIf="f['district'].errors && f['district'].errors['required']">
+          <p class="help is-danger">Este campo es obligatorio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--District Input-->
+
+  <!--Latitude Input-->
+  <div class="field">
+    <label class="label">Latitud</label>
+    <div class="control">
+      <input class="input" type="text" formControlName="latitude">
+      <div *ngIf="submitted && form.get('latitude')?.errors" class="small text-danger">
+        <div *ngIf="f['latitude'].errors && f['latitude'].errors['required']">
+          <p class="help is-danger">Este campo es obligatorio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Latitude Input-->
+
+  <!--Longitude Input-->
+  <div class="field">
+    <label class="label">Longitud</label>
+    <div class="control">
+      <input class="input" type="text" formControlName="longitude">
+      <div *ngIf="submitted && form.get('longitude')?.errors" class="small text-danger">
+        <div *ngIf="f['longitude'].errors && f['longitude'].errors['required']">
+          <p class="help is-danger">Este campo es obligatorio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Longitude Input-->
+
+  <div class="field is-grouped">
+    <div class="control">
+      <button type="submit" class="button is-link">Actualizar</button>
+    </div>
+    <div class="control">
+      <button class="button is-link is-light">Volver</button>
+    </div>
+  </div>
+</form>

@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+/* Center content of navbar
+to override bulma align to left in this component */
+.navbar .navbar-brand {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.navbar .navbar-brand > .navbar-item,
+.navbar .navbar-brand .navbar-link {
+  display: inline-block;
+}
+
