@@ -9,6 +9,7 @@ This project is a Technical Challenge made with [Angular](https://angular.io/) v
 
 ## Structure folder used
 
+```
 app/
 ├── core/
 ├──── components/
@@ -16,6 +17,7 @@ app/
 └──── services/
 ├── modules/
 └── shared/
+```
 
 ## To run this project
 
