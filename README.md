@@ -2,19 +2,24 @@
 
 This project is a Technical Challenge made with [Angular](https://angular.io/) version 13.2.6.
 
-## Development server
+## Packages used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- CSS Framework: [Bulma](https://bulma.io/) version 0.9
+- Font Icons: [Font Awesome Icons](https://www.npmjs.com/package/@fortawesome/angular-fontawesome) version 6
 
-## Build
+## Structure folder used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+app/
+├── core/
+├──── components/
+├──── models/
+└──── services/
+├── modules/
+└── shared/
 
-## Running unit tests
+## To run this project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
+1. Clone project
+2. Execute `npm install`
+3. Run with `ng serve`
+4. That's it

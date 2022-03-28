@@ -1,0 +1,50 @@
+<nav class="navbar is-link">
+  <div class="navbar-brand">
+    <span class="navbar-item is-size-3">Agencias</span>
+  </div>
+</nav>
+<section class="hero is-fullheight is-default is-bold">
+  <div class="hero-body">
+      <div class="container has-text-centered">
+          <div class="columns is-vcentered">
+            <!--Start Table-->
+            <table class="table table is-fullwidth">
+              <tbody>
+                <tr class="clickable-row" *ngFor="let elem of agenciesData" (click)="goToUpdate(elem)">
+                  <!--Image row-->
+                  <td>
+                    <figure class="image is-64x64">
+                      <img class="is-rounded" src="https://bulma.io/images/placeholders/64x64.png">
+                    </figure>
+                  </td>
+                  <!--Image row-->
+                  <!--Name, Province and Address row-->
+                  <td class="has-text-left">
+                    <b class="is-size-4">{{ elem.agencia }}</b>
+                    <p class="is-size-6 has-text-weight-semibold">{{ elem.provincia }}</p>
+                    <p class="is-size-7">{{ elem.direccion }}</p>
+                  </td>
+                  <!--Name, Province and Address row-->
+                  <!--Favourite row-->
+                  <td class="is-vcentered">
+                    <fa-icon [icon]="faStar"></fa-icon>
+                  </td>
+                  <!--Favourite row-->
+                </tr>
+              </tbody>
+            </table>
+            <!--End Table-->
+          </div>
+      </div>
+  </div>
+
+  <div class="hero-foot">
+      <div class="container">
+          <div class="tabs is-centered">
+              <ul>
+                  <li>BCP 2022</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
