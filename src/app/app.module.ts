@@ -6,9 +6,12 @@ import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
 
+import { SplashScreenComponent } from './core/components/splash-screen/splash-screen.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SplashScreenComponent
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,10 @@ export class AgenciesService {
 
   ) { }
 
+  /**
+   * Save Agencies in Local Storage
+   * Only if doesnt exist
+   */
   public saveAgenciesInLocalStorage() {
 
     const localStorageAgencies = localStorage.getItem('agencies');
@@ -21,6 +25,10 @@ export class AgenciesService {
 
   }
 
+  /**
+   * Get agencies in local storage
+   * @returns json or empty object
+   */
   public index() {
 
     const localStorageAgencies = localStorage.getItem('agencies');
@@ -28,6 +36,11 @@ export class AgenciesService {
     return localStorageAgencies ? JSON.parse(localStorageAgencies) : [];
   }
 
+  /**
+   * Update agency in local storage
+   * searching for latitude and longitude
+   * because the data doesn't have id
+   */
   async update(oldValues: any, newValues: any) {
 
     const localStorageAgencies = localStorage.getItem('agencies');
@@ -44,6 +57,11 @@ export class AgenciesService {
     return true;
   }
 
+  /**
+   * Update agencies in local storage
+   * @param agencies
+   * @returns boolean
+   */
   updateAgenciesInLocalStorage(agencies: any) {
     return new Promise((resolve, reject) => {
 

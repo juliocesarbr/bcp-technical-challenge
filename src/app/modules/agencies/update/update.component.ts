@@ -25,14 +25,9 @@ export class UpdateComponent implements OnInit {
   ) {
     this.activatedRoute.params.subscribe(
       params => {
-        // console.log('activatedRoute params() params:', params);
 
+        // Get agency data from activated route params
         this.agency = params ?? this.agency;
-        console.log('activatedRoute params() this.agency:', this.agency);
-
-        // if (this.agency) {
-
-        // }
       }
     );
 
@@ -58,14 +53,13 @@ export class UpdateComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    // this.disableSubmitButton = true;
 
     // Stop here if form is invalid.
     if (this.form.invalid) {
-      // this.disableSubmitButton = false;
       return;
     }
 
+    // Prepare agency object for update
     const formAgencyValues = {
       agencia: this.form.value.name,
       departamento: this.agency.departamento,
@@ -79,6 +73,10 @@ export class UpdateComponent implements OnInit {
     this.update(formAgencyValues);
   }
 
+  /**
+   * Update agency
+   * @param formValues any
+   */
   async update(formValues: any) {
     const updatedAgency = await this.agenciesService.update(this.agency, formValues)
 

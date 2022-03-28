@@ -22,8 +22,11 @@ export class IndexComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /**
+   * Go to Update Agency page
+   * @param agency any
+   */
   goToUpdate(agency: any) {
-    // console.log('goToUpdate() --> agency', agency);
     this.router.navigate(['agencies/update', agency]);
   }
 
